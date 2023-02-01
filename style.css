@@ -1,0 +1,122 @@
+:root {
+    --color-background: #FFF1EB;
+    --color-accent: #D56D3F;
+    --color-heading: #2C2420;
+    --color-body: #68544B;
+    --font-accent: 'Dancing Script', Arial, Helvetica, sans-serif ;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+a, a:visited {
+    text-decoration: none;
+    color: var(--color-heading)
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Typography */
+
+body {
+    font-family:'Poppins', Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: var(--color-body);
+    background: var(--color-background);
+}
+
+h1, 
+h2 {
+    color: var(--color-heading);
+    margin-top: 13px;
+    font-weight: 500;
+}
+
+
+/* Layout */
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 128px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 27px;
+}
+
+.navbar__list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 48px;
+    font-weight: 500;
+}
+
+.navbar__item.active a {
+    color: var(--color-accent);
+}
+
+
+.logo__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.logo span{
+    font-family: 'Lora';
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 26px;
+}
+
+.logo img {
+    transform: translateY(4px);
+    margin-top: 8px;
+}
+
+.hamburger {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .navbar__list {
+        position: fixed;
+        left: 100%;
+        top: 20px;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        transition: .3s;
+        box-shadow: 3px 4px 5px rgba(0, 0, 0, .3);
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+        content: url(icons/justify.png);
+        transform: translateY(7px);
+        width: 27px
+}
+}
