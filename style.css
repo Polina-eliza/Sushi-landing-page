@@ -304,3 +304,12 @@ h3 {
 
     }
 }
+
+.dishes__subheading {
+    text-align: center;
+    margin-top: 120px;
+}
+
+.dishes__heading {
+    text-align: center;
+}
