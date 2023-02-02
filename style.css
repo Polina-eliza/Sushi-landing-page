@@ -54,10 +54,8 @@ h1 {
 }
 
 h2 {
-
     font-size: 36px;
     line-height: 46px;
-    margin-top: 12px;
 }
 
 h3 {
@@ -97,7 +95,6 @@ h3 {
     }
 
     h2 {
-        margin-top: 8px;
         font-size: 24px;
         line-height: 31px;
     }
@@ -142,7 +139,6 @@ h3 {
     font-family: 'Lora';
     font-weight: 600;
     font-size: 20px;
-    transform: translateY(1px);
 }
 
 .logo::before {
@@ -205,11 +201,10 @@ h3 {
     }
 }
 
-.content {
+.flex {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 116px;
 }
 
 .info {
@@ -255,7 +250,6 @@ h3 {
     .line__break__info {
         display: none;
     }
-
 }
 
 @media (max-width: 768px) {
@@ -266,7 +260,7 @@ h3 {
 }
 
 @media (max-width: 576px) {
-    .content {
+    .flex {
         flex-direction: column-reverse;
         text-align: center;
     }
@@ -280,12 +274,37 @@ h3 {
     }
 }
 
-.about__img {
+.hero {
+    margin-top: 158px;
+}
+
+.container__mini {
+    margin: 0 60px;
+}
+
+.hero__img__wrapper {
+    min-width: 350px;
+}
+
+@media (max-width: 576px) {
+    .container__mini {
+        margin: 0 40px;
+    }
+
+    .hero {
+        margin-top: 74px;
+    }
+}
+
+.about {
+    margin-top: 150px;
+}
+
+.about__img__wrapper {
     min-width: 200px;
 }
 
-.content__about {
-    margin: 145px 60px 0 60px;
+.container__mini__about {
     gap: 80px;
 }
 
@@ -294,14 +313,11 @@ h3 {
     top: 850px;
     right: -5px;
     transform: rotate(-30deg);
-
 }
 
 @media (max-width: 576px) {
-    .content__about {
-        margin: 145px 40px 0 40px;
-        gap: 45px;
-
+    .container__mini__about {
+        gap: 60px;
     }
 }
 
@@ -312,4 +328,42 @@ h3 {
 
 .dishes__heading {
     text-align: center;
+}
+
+.card {
+    margin-top: 72px;
+    background: #FFF5F0;
+    box-shadow: 0px 8px 20px rgba(201, 94, 44, 0.08);
+    border-radius: 24px;
+    width: 262px;
+    min-height: 254px;
+    text-align: center;   
+}
+
+.card__item__name {
+    font-size: 20px;
+    line-height: 26px;
+    color: #2C2420;
+}
+
+.card__item {
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 20px;
+    margin-top: 4px;
+}
+
+.dish__price {
+    font-family: 'Poppins';
+    font-size: 20px;
+    line-height: 30px;
+    color: var(--color-accent);
+    margin-top: 16px;
+}
+
+.cards__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
