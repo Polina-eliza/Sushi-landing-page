@@ -57,6 +57,7 @@ h2 {
 
     font-size: 36px;
     line-height: 46px;
+    margin-top: 12px;
 }
 
 h3 {
@@ -94,6 +95,16 @@ h3 {
     body {
         font-size: 15px;
     }
+
+    h2 {
+        margin-top: 8px;
+        font-size: 24px;
+        line-height: 31px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
 }
 
 
@@ -102,7 +113,8 @@ h3 {
 .container {
     max-width: 1400px;
     margin: 0 auto;
-    padding: 0 5%;
+    padding: 0 8%;
+    position: relative;
     
 }
 
@@ -185,6 +197,7 @@ h3 {
         text-align: center;
         transition: .3s;
         width: 100vw;
+        padding-bottom: 45px;
     }
 
     .navbar__list.active {
@@ -192,14 +205,14 @@ h3 {
     }
 }
 
-.hero {
+.content {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 116px;
 }
 
-.hero__subheading {
+.info {
     margin-top: 16px;
 }
 
@@ -219,7 +232,31 @@ h3 {
     margin-left: 8px;
 }
 
+.leaf {
+    opacity: 0.1;
+    width: 150px;
+}
 
+.leaf-1  {
+    position: absolute;
+    top: 30px;
+    left: -50px;
+    transform: rotate(90deg);
+}
+
+.leaf-2 {
+    position: absolute;
+    top: 550px;
+    right: -40px;
+}
+
+
+@media (max-width: 992px) {
+    .line__break__info {
+        display: none;
+    }
+
+}
 
 @media (max-width: 768px) {
     .btn {
@@ -229,7 +266,7 @@ h3 {
 }
 
 @media (max-width: 576px) {
-    .hero {
+    .content {
         flex-direction: column-reverse;
         text-align: center;
     }
@@ -240,5 +277,30 @@ h3 {
     
     .btn {
         margin-top: 32px;
+    }
+}
+
+.about__img {
+    min-width: 200px;
+}
+
+.content__about {
+    margin: 145px 60px 0 60px;
+    gap: 80px;
+}
+
+.leaf-3 {
+    position: absolute;
+    top: 850px;
+    right: -5px;
+    transform: rotate(-30deg);
+
+}
+
+@media (max-width: 576px) {
+    .content__about {
+        margin: 145px 40px 0 40px;
+        gap: 45px;
+
     }
 }
