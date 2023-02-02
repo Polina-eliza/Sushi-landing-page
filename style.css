@@ -54,7 +54,8 @@ h2 {
 .container {
     max-width: 1400px;
     margin: 0 auto;
-    padding: 0 128px;
+    padding: 0 5%;
+    
 }
 
 .navbar {
@@ -79,44 +80,81 @@ h2 {
 
 .logo__wrapper {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-
 }
 
 .logo span{
     font-family: 'Lora';
     font-weight: 600;
     font-size: 20px;
-    line-height: 26px;
+    transform: translateY(1px);
 }
 
-.logo img {
-    transform: translateY(4px);
-    margin-top: 8px;
-}
-
-.hamburger {
+.hamburger{
     display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px 0;
+    border-radius: 10px;
+    transition: all .3s ease-in-out;
+    background-color: var(--color-heading);
 }
 
 @media (max-width: 768px) {
+
+}
+
+
+
+
+
+@media (max-width: 576px) {
+    
+    .container {
+        padding: 0 26px;
+
+    }
+    
+    
+    
+    .hamburger{
+        display: block;  
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+        width: 25px;
+        height: 3px;
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    
     .navbar__list {
         position: fixed;
-        left: 100%;
-        top: 20px;
+        left: -100%;
+        top: 0;
         flex-direction: column;
-        width: 100%;
+        background: var(--color-background);
         text-align: center;
         transition: .3s;
         box-shadow: 3px 4px 5px rgba(0, 0, 0, .3);
     }
 
-    .hamburger {
-        display: block;
-        cursor: pointer;
-        content: url(icons/justify.png);
-        transform: translateY(7px);
-        width: 27px
-}
+    .navbar__item {
+        margin: 32px 146px 0 146px;
+    }
+
+    .navbar__list.active {
+        left: 0;
+    }
 }
