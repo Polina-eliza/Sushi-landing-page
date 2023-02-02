@@ -344,6 +344,7 @@ h3 {
     font-size: 20px;
     line-height: 26px;
     color: #2C2420;
+    margin-top: 24px;
 }
 
 .card__item {
@@ -364,6 +365,8 @@ h3 {
 
 .cards__wrapper {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    gap: 56px;
 }
+
