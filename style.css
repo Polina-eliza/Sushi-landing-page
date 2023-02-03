@@ -336,8 +336,9 @@ h3 {
     box-shadow: 0px 8px 20px rgba(201, 94, 44, 0.08);
     border-radius: 24px;
     width: 262px;
-    min-height: 254px;
-    text-align: center;   
+    text-align: center; 
+    position: relative;
+    padding-bottom: 25px;
 }
 
 .card__item__name {
@@ -363,10 +364,86 @@ h3 {
     margin-top: 16px;
 }
 
+.dish__price:after {
+    content: url(icons/bag-icon.svg);
+    vertical-align: middle;
+    background: #D56D3F;
+    box-shadow: 0px 4px 20px rgba(84, 39, 18, 0.2);
+    height: 32px;
+    width: 32px;
+    margin-left: 43px;
+    padding: 4px;
+    border-radius: 55px;
+    display: inline-block;
+}
+
 .cards__wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 56px;
+    gap: 10%;
 }
 
+.card .img1, .img2, .img3 {
+    position: absolute;
+    top: 20px;                        
+    transform: translate(-50%, -50%);
+}
+
+.card__list {
+    margin-top: 126px;
+}
+
+@media (max-width: 992px) {
+    .card__item__name {
+        font-size: 17px;
+    }
+
+    .dish__price:after {
+        height: 27px;
+        width: 27px;
+    }
+
+    .dish__price {
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 768px) {
+    .card__item__name {
+        font-size: 14px;
+        margin-top: 19px;
+    }
+
+    .dish__price {
+        font-size: 13px;
+    }
+
+    .dish__price::after {
+        margin-left: 14px;
+    }
+
+    .dish__price:after {
+        height: 20px;
+        width: 20px;
+    }
+
+    .card__list {
+        margin-top: 100px;
+    }
+
+    .card {
+        padding-bottom: 17px;
+    }
+
+    .card__item {
+        font-size: 12px;
+    }
+
+}
+
+@media (max-width: 576px) {
+   .dishes__heading {
+    margin-bottom: 48px;
+   }
+}
